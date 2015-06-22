@@ -1,0 +1,57 @@
+.loginLabel {
+  height: == 50;
+  width: == 300;
+}
+
+.loginInput {
+  height: == 50;
+  width: == 295;
+}
+
+.loginButton {
+  height: == 50;
+  width: == 300;
+}
+
+.login {
+  width: == 300;
+  center-x: == ::window[center-x];
+  center-y: == ::window[center-y];
+  @v | (.loginLabel)-10-(.loginInput)-10-(.loginButton) |;
+}
+
+.logout {
+  height: == 50;
+  width: == 700;
+}
+
+.chatInput {
+  height: == 50;
+  width: == 700;
+}
+
+.chatOutput {
+  height: == 50;
+  width: == 700;
+}
+
+.chat {
+  center-x: == ::window[center-x];
+  @v | (.chatInput)-10-(.chatOutput) |;
+}
+
+.users {
+  height: == 35;
+  width: == 700;
+  center-x: == ::window[center-x];
+}
+
+.rightPanel {
+  @v | (#logout)-10-(#users) |;
+}
+
+.fullPanel {
+  center-x: == ::window[center-x];
+  center-y: == ::window[center-y];
+  @h | (.chat)-10-(.rightPanel) |;
+}

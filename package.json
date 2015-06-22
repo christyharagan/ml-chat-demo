@@ -1,0 +1,53 @@
+{
+  "name": "ml-chat-demo",
+  "version": "0.1.0",
+  "description": "A chat demo built on Marklogic",
+  "repository": "christyharagan/ml-chat-demo",
+  "author": {
+    "name": "Christy Haragan",
+    "email": "christy.haragan.github@gmail.com",
+    "url": "https://github.com/christyharagan"
+  },
+  "keywords": [
+    "marklogic",
+    "demo",
+    "chat"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cyclejs": "0.22.0",
+    "koa": "^0.21.0",
+    "koa-body": "^1.2.1",
+    "koa-rx-router": "^0.1.0",
+    "koa-static": "^1.4.9",
+    "koala": "^1.0.0",
+    "marklogic": "1.0.2",
+    "ml-admin": "^0.1.0",
+    "ml-typescript-definitions": "^0.1.0",
+    "ml-uservices": "^0.1.0",
+    "rx": "^2.5.3",
+    "socket.io": "^1.3.5",
+    "socket.io-client": "^1.3.5",
+    "typescript-schema": "^0.2.0",
+    "uservices": "^0.2.0"
+  },
+  "typescript": "1.5.0-beta",
+  "devDependencies": {
+    "brfs": "^1.4.0",
+    "browserify": "^10.2.4",
+    "gulp": "^3.9.0",
+    "gulp-ml-uservices": "^0.1.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-ml-admin": "^0.1.0",
+    "gulp-typescript": "^2.7.6",
+    "gulp-typescript-schema": "^0.1.0",
+    "gulp-util": "^3.0.5",
+    "lodash.assign": "^3.2.0",
+    "merge-stream": "^0.1.7",
+    "tsify": "^0.11.2",
+    "typescript": "^1.5.0-beta",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.2"
+  }
+}

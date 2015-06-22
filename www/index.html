@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>
+      Marklogic Chat Demo
+    </title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/gss" href="index.gss">
+    <script>
+      GSS_CONFIG = {
+        worker: "worker.js"
+      }
+    </script>
+    <script src="gss.js"></script>
+  </head>
+
+  <body>
+    <div id="app" class="app"></div>
+    <script type="text/javascript">
+        window.engine = new GSS(document)
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
