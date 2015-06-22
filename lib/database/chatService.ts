@@ -1,8 +1,8 @@
 import * as mlu from 'ml-uservices'
 import {Observable} from 'uservices'
 import {Message} from '../common/models/message'
-import {ChatService, HighlightedMessage} from '../common/services/chatService'
-import {ContentSearch} from './queries'
+import {ChatService} from '../common/services/chatService'
+//import {ContentSearch} from './queries'
 
 export class MessageBroadcast extends mlu.AlertObservable<Message, Message> {
   transform(uri: string, content: any) {
@@ -12,7 +12,7 @@ export class MessageBroadcast extends mlu.AlertObservable<Message, Message> {
 
 @mlu.mlService()
 export class ChatServiceML implements ChatService {
-  private contentSearch = new ContentSearch()
+//  private contentSearch = new ContentSearch()
 
   @mlu.mlMethod({
     method: 'put'

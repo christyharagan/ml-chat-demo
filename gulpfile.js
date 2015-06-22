@@ -64,27 +64,28 @@ gulp.task('generate', function() {
   return merge(schema.pipe(gulp.dest('dist')), specs.pipe(gulp.dest('dist')), databaseSpec.pipe(gulp.dest('dist')))
 })
 
-gulp.task('createDatabase', [], function(){
-  return gulp.src('dist/assets/databaseSpec.json').pipe(database({
-    action: 0,
-    user: {
-      name: 'admin',
-      password: 'passw0rd'
-    }
-  }))
-})
+// TODO
+// gulp.task('createDatabase', [], function(){
+//   return gulp.src('dist/assets/databaseSpec.json').pipe(database({
+//     action: 0,
+//     user: {
+//       name: 'admin',
+//       password: 'passw0rd'
+//     }
+//   }))
+// })
+//
+// gulp.task('clearDatabase', ['generate'], function(){
+//   return gulp.src('dist/assets/databaseSpec.json').pipe(database({
+//     action: 2,
+//     user: {
+//       name: 'admin',
+//       password: 'passw0rd'
+//     }
+//   }))
+// })
 
-gulp.task('clearDatabase', ['generate'], function(){
-  return gulp.src('dist/assets/databaseSpec.json').pipe(database({
-    action: 2,
-    user: {
-      name: 'admin',
-      password: 'passw0rd'
-    }
-  }))
-})
-
-gulp.task('ml-deploy', ['generate', 'clearDatabase'], function() {
+gulp.task('ml-deploy', function() {
   return gulp.src('lib/database/chatService.ts').pipe(deploy(path.posix.join(__dirname, 'lib/'), {
     password: 'passw0rd',
     port: 8000
@@ -95,4 +96,4 @@ gulp.task('ml-deploy', ['generate', 'clearDatabase'], function() {
 })
 
 //gulp.task('default', ['generate'], function(){})
-gulp.task('default', ['ml-deploy'], function(){})
+//gulp.task('default', ['ml-deploy'], function(){})
